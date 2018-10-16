@@ -5,9 +5,16 @@ var Color = ["#0000FF","#1112FE","#2223FE","#3334FD","#4446FD","#5557FD",
 var i=0;
 var timer;
 
+
 function swap()
 {
 	timer = setInterval(setColor, 100);
+}
+
+function SymplifModif(truc)
+{
+	document.getElementById("body").style.backgroundColor = BackgroundColor[truc];
+	document.getElementById("body").style.color = Color[truc];
 }
 
 function setColor()
@@ -16,14 +23,12 @@ function setColor()
 	{
 		if (i < BackgroundColor.length)
 		{
-			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
-			document.getElementById("body").style.color = Color[i];
+			SymplifModif(i);
 			i = i+1;
 		}
 		else
 		{
-			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
-			document.getElementById("body").style.color = Color[i];
+			SymplifModif(i);
 			document.getElementById("body").className = "night";
 			document.getElementById("swap").innerHTML = "Mode Jour";
 			clearInterval(timer);
@@ -33,14 +38,12 @@ function setColor()
 	{
 		if (i > 0)
 		{
-			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
-			document.getElementById("body").style.color = Color[i];
+			SymplifModif(i);
 			i = i-1;
 		}
 		else
 		{
-			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
-			document.getElementById("body").style.color = Color[i];
+			SymplifModif(i);
 			document.getElementById("body").className = "day";
 			document.getElementById("swap").innerHTML = "Mode Nuit";
 			clearInterval(timer);
