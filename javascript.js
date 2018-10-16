@@ -1,0 +1,49 @@
+var BackgroundColor = ["#FFFFFF","#EFEFEF","#DFDFDF","#CFCFCF","#BFBFBF","#AFAFAF",
+"#8F9F9F","#7F8F8F","#6F7F7F","#5F6F6F","#4F5F5F","#2F4F4F"];
+var Color = ["#0000FF","#1112FE","#2223FE","#3334FD","#4446FD","#5557FD",
+"#6668FC","#878AFC","#879BFC","#87ACFB","#87BDFB","#87CEFA"];
+var i=0;
+var timer;
+
+function swap()
+{
+	timer = setInterval(setColor, 100);
+}
+
+function setColor()
+{
+	if (document.getElementById("body").className=="day")
+	{
+		if (i < BackgroundColor.length)
+		{
+			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
+			document.getElementById("body").style.color = Color[i];
+			i = i+1;
+		}
+		else
+		{
+			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
+			document.getElementById("body").style.color = Color[i];
+			document.getElementById("body").className = "night";
+			document.getElementById("swap").innerHTML = "Mode Jour";
+			clearInterval(timer);
+		}
+	}
+	else
+	{
+		if (i > 0)
+		{
+			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
+			document.getElementById("body").style.color = Color[i];
+			i = i-1;
+		}
+		else
+		{
+			document.getElementById("body").style.backgroundColor = BackgroundColor[i];
+			document.getElementById("body").style.color = Color[i];
+			document.getElementById("body").className = "day";
+			document.getElementById("swap").innerHTML = "Mode Nuit";
+			clearInterval(timer);
+		}
+	}
+}

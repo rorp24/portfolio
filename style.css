@@ -1,0 +1,27 @@
+@charset "UTF-8";
+fieldset
+{
+	border:none;
+}
+
+body
+{
+	font-family: Arial, sans-serif;
+}
+
+.block
+{
+	border-top:solid;
+}
+
+.day
+{
+	background-color: #FFFFFF;
+	color: #0000FF;
+}
+
+.night
+{
+	background-color: #2F4F4F;
+	color: #87CEFA;
+}
