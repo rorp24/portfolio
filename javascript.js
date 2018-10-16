@@ -6,6 +6,23 @@ var i=0;
 var timer;
 
 
+function time()
+{
+	var jour = new Date();
+	var heure = jour.getHours();
+	if (heure < 8 || heure > 20)
+	{
+		i = BackgroundColor.length;
+		document.getElementById("body").className = "night";
+		document.getElementById("swap").innerHTML = "Mode Jour";
+	}
+	else
+	{
+		document.getElementById("body").className = "day";
+		document.getElementById("swap").innerHTML = "Mode Nuit";
+	}
+}
+
 function swap()
 {
 	timer = setInterval(setColor, 100);
