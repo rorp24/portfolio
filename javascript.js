@@ -25,7 +25,7 @@ function time()
 
 function swap()
 {
-	timer = setInterval(setColor, 100);
+	timer = setInterval(setColor, 1000);
 }
 
 function SymplifModif(truc)
