@@ -67,3 +67,17 @@ function setColor()
 		}
 	}
 }
+
+function afficMeteo()
+{
+	if (document.getElementById("meteo").style.display=="none")
+	{
+		document.getElementById("meteo").style.display = "block";
+		document.getElementById("meteoButton").innerHTML = "cacher météo";
+	}
+	else
+	{
+		document.getElementById("meteo").style.display = "none";
+		document.getElementById("meteoButton").innerHTML = "afficher météo";
+	}
+}

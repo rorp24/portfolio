@@ -14,8 +14,9 @@
 	</head>
 	
 	<body id="body" class="day" onload="time()">
-	
 		<button id="swap" onclick="swap()" style="position: relative;">Mode Nuit</button>
+		<button id="meteoButton" onclick="afficMeteo()" style="position: relative;">afficher méteo</button>
+		<iframe id="meteo" style="display:none;" src="https://api.openweathermap.org/data/2.5/weather?q=Grenoble&mode=html&appid=c1c160358581bede899a28a9336a55b1"> </iframe>
 		<fieldset class=block>
 		
 			<legend>informations personnelles</legend>
